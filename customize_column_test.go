@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jinzhu/gorm"
+	"github.com/danil/gorm"
 )
 
 type CustomizeColumn struct {

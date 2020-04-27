@@ -37,10 +37,10 @@ type DB struct {
 //       db, err := gorm.Open("mysql", "user:password@/dbname?charset=utf8&parseTime=True&loc=Local")
 //     }
 // GORM has wrapped some drivers, for easier to remember driver's import path, so you could import the mysql driver with
-//    import _ "github.com/jinzhu/gorm/dialects/mysql"
-//    // import _ "github.com/jinzhu/gorm/dialects/postgres"
-//    // import _ "github.com/jinzhu/gorm/dialects/sqlite"
-//    // import _ "github.com/jinzhu/gorm/dialects/mssql"
+//    import _ "github.com/danil/gorm/dialects/mysql"
+//    // import _ "github.com/danil/gorm/dialects/postgres"
+//    // import _ "github.com/danil/gorm/dialects/sqlite"
+//    // import _ "github.com/danil/gorm/dialects/mssql"
 func Open(dialect string, args ...interface{}) (db *DB, err error) {
 	if len(args) == 0 {
 		err = errors.New("invalid database source")
@@ -110,6 +110,10 @@ func (s *DB) Close() error {
 func (s *DB) DB() *sql.DB {
 	db, _ := s.db.(*sql.DB)
 	return db
+}
+
+func (s *DB) SetDB(db *sql.DB) {
+	s.db = db
 }
 
 // CommonDB return the underlying `*sql.DB` or `*sql.Tx` instance, mainly intended to allow coexistence with legacy non-GORM code.

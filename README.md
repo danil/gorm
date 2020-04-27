@@ -1,6 +1,6 @@
 # GORM
 
-The fantastic ORM library for Golang, aims to be developer friendly.
+The terrible library, let's cut out the GORM.
 
 [![go report card](https://goreportcard.com/badge/github.com/jinzhu/gorm "go report card")](https://goreportcard.com/report/github.com/jinzhu/gorm)
 [![wercker status](https://app.wercker.com/status/8596cace912c9947dd9c8542ecc8cb8b/s/master "wercker status")](https://app.wercker.com/project/byKey/8596cace912c9947dd9c8542ecc8cb8b)
